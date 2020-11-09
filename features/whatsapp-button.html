@@ -1,0 +1,109 @@
+<!-- Developer Custom Library CSS -->
+<style>
+	@keyframes bouncingbaloon {
+		0% {
+			transform: translateY(-5px);
+		}
+
+		50% {
+			transform: translateY(0);
+		}
+
+		100% {
+			transform: translateY(-5px);
+		}
+	}
+
+	.scroll-whatsapp {
+		position: fixed;
+		z-index: 2;
+		align-items: center;
+		justify-content: space-evenly;
+
+		right: 3%;
+		bottom: 0;
+		width: 180px;
+		height: 46px;
+		padding: 0 20px;
+
+		text-align: center;
+
+		color: #fff;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		background: #25d366;
+
+		font-size: 18px;
+	}
+
+	.scroll-whatsapp:hover {
+		color: #fff;
+		background: #128c7e;
+	}
+
+	.scroll-whatsapp span {
+		position: absolute;
+
+		right: -20px;
+		bottom: 130%;
+		left: -20px;
+		padding: 15px;
+
+		animation: bouncingbaloon 1.5s ease-in-out infinite;
+		text-align: center;
+
+		color: #053e37;
+		border-radius: 10px;
+		background: #f8f8f8;
+
+		font-size: 13px;
+		font-weight: 300;
+		line-height: 1.2;
+	}
+
+	.scroll-whatsapp span:before {
+		position: absolute;
+
+		right: 0;
+		bottom: -6px;
+		left: 0;
+		width: 0;
+		height: 0;
+		margin: 0 auto;
+
+		content: '';
+
+		border-width: 6px 6px 0;
+		border-style: solid;
+		border-color: #f8f8f8 transparent transparent;
+	}
+
+	.scroll-whatsapp img {
+		object-fit: contain;
+	}
+
+	#wp-close {
+		position: absolute;
+		right: 1%;
+		bottom: 15%;
+		font-size: 22px;
+		z-index:100;
+    cursor:pointer;
+	}
+</style>
+
+<p id="wp-close" class="wp-close">&times;</p>
+<a href="https://api.whatsapp.com/send?phone=NUM" id="wp-button" class="scroll-whatsapp" target="_blank">
+	<span id="wp-text">
+		Sorularınızı whatsapp üzerinden bize iletebilirsiniz.
+	</span>
+	<img src="../Content/images/icon/whatsapp.svg" alt="" width="16" height="16"> WhatsApp
+</a>
+
+<!-- Optional Developer Custom JavaScript -->
+<script>
+	$("#wp-close").on("click", function () {
+    $("#wp-text").fadeOut();
+    $("#wp-close").fadeOut();
+});
+</script>

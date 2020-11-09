@@ -1,0 +1,94 @@
+@media (max-width: 1920px) {
+
+}
+
+
+/* (1680x1050) WSXGA+ Display */
+
+@media (max-width: 1680) {
+
+
+}
+
+
+/* (1600x900) HD+ Display */
+
+@media (max-width: 1600px) {
+
+}
+
+/* iPad or %125 Zoom 1080p */
+
+@media (max-width: 1536px) {
+ 
+}
+
+/* (1440x900) WXGA+ Display - MacBook */
+
+@media (max-width: 1440px) {
+
+}
+
+
+/* (1366x768) WXGA Display - Laptop */
+
+@media (max-width: 1366px) {
+/* insert styles here */
+}
+
+
+/* (1280x1024) SXGA Display */
+
+@media (max-width: 1280px) {
+ 
+}
+
+@media (width: 1024px) {
+ 
+}
+
+
+/* Phones ---------- */
+
+/* iPad */
+
+@media(max-device-width: 1024px) {
+ 
+}
+
+
+/* iPhone 4 & 4S */
+
+@media(max-device-width: 960px ) and (max-width: 960px){
+
+}
+
+/* Tablets */
+
+@media(max-device-width: 768px) and (max-width: 768px){
+/* insert styles here */
+}
+
+/* Android - General Smartphone */
+
+@media (max-device-width: 640px) and (max-width: 640px){
+/* insert styles here */
+}
+
+/* iPhone */
+
+@media(max-device-width: 480px) and (max-width: 480px) {
+ 
+
+}
+
+/* Slim Smartphone */
+
+@media(max-device-width: 360px) and (max-width: 360px){
+ 
+}
+
+@media(max-device-width: 320px) and (max-width: 320px){
+
+}
+
