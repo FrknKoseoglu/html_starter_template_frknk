@@ -1,40 +1,86 @@
-body{
-    font-family: 'Advent Pro', sans-serif;
-    font-size:14px;
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.f-16{
-    font-size:16px !important;
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
-.f-14{
-    font-size:16px !important;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
 }
 
-.main-color{
-    color:#000 !important;
-}
-.second-color{
-    color:#fff !important;
+/* >>>>>>>>>>>>>>>>>>>> Custom CSS  >>>>>>>>>>>>>>>>>>>> */
+.w-bold {
+  font-weight: 600 !important;
 }
 
-.main-bg{
-    background:#000 !important;
-}
-.second-bg{
-    background:#fff !important;
+.w-normal {
+  font-weight: normal !important;
 }
 
-.btn-main{
-   
+.w-light {
+  font-weight: lighter !important;
 }
 
-.btn-main:hover{
+.m-show {
+  display: none !important;
 }
 
-.btn-second{
-  
+.d-show {
+  display: unset !important;
 }
 
-.btn-second:hover{
+.d-block {
+  display: block !important;
 }
+
+.d-flex {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.vertical-center-d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.lazy {
+  display: block;
+  width: 100%;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Custom Responsive CSS @@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* Extra small devices (phones, 960px and down) */
+@media only screen and (max-width: 960px) {
+  .m-show {
+    display: unset !important;
+  }
+  .d-show {
+    display: none !important;
+  }
+  .m-flex {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  .m-order {
+    -webkit-box-ordinal-group: 0 !important;
+        -ms-flex-order: -1 !important;
+            order: -1 !important;
+  }
+  .m-block {
+    display: block !important;
+  }
+}
+
+/* <<<<<<<<<<<<<<<<<<< Custom CSS  <<<<<<<<<<<<<<<<<<< */
+/*# sourceMappingURL=style.css.map */
