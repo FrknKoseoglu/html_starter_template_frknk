@@ -1,0 +1,34 @@
+
+$color:(
+"primary":red,
+"second":blue,
+"third":green,
+);
+
+@function color($name){
+  @return  map.get($color, $name);
+}
+
+/* */
+
+$font:(
+"primary":Arial, Helvetica, sans-serif,
+"second":Arial, Helvetica, sans-serif,
+"third":Arial, Helvetica, sans-serif,
+);
+
+@function font($name){
+  @return  map.get($font, $name);
+}
+
+/* */
+
+$bgcolor:(
+"primary":red,
+"second":blue,
+"third":green,
+);
+
+@function bgcolor($name){
+  @return  map.get($bgcolor, $name);
+}
