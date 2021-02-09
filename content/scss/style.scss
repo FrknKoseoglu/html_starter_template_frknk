@@ -1,15 +1,24 @@
+@import "./variables";
+@import "./mixin";
+@import "./func";
+
+/* - */
+/* GLOBAL CSS >>> */
 @import "./global";
-@import "./custom";
-
-
 /* - */
-/* - */
+/* <<< GLOBAL CSS  */
+
 /* - */
 /* STYLES CSS >>> */
 
 html{
-   color:$color(primary);
-   font-family: $font(primary);
+   color:color(primary);
+   font-family:$pFont;
+   background:bgcolor(primary);
+   font-size:16px; 
+   @media (max-width:480px){
+      font-size:14px;
+   }
 }
 
 
@@ -17,6 +26,4 @@ html{
 
 
 /*  <<< STYLES CSS */
-/* - */
-/* - */
 /* - */

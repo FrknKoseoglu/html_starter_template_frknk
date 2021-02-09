@@ -26,7 +26,9 @@ time, mark, audio, video {
 
 /* make sure to set some focus styles for accessibility */
 :focus {
-    outline: 0;
+    outline-style: none;
+    box-shadow: none;
+    border-color: transparent;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -130,7 +132,9 @@ html {
  */
 
 a:focus {
-    outline: thin dotted;
+    outline-style: none;
+box-shadow: none;
+border-color: transparent;
 }
 
 /**
