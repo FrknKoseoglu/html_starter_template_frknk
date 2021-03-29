@@ -1,6 +1,8 @@
-@import "./variables";
-@import "./mixin";
-@import "./func";
+/* - */
+/* LIBRARY CSS >>> */
+// @import "./lib";
+/* - */
+/* <<< LIBRARY CSS  */
 
 /* - */
 /* GLOBAL CSS >>> */
@@ -11,17 +13,18 @@
 /* - */
 /* STYLES CSS >>> */
 
-html{
+body{
    color:color(primary);
-   font-family:$pFont;
+   font-family:$Font-1;
    background:bgcolor(primary);
-   font-size:16px; 
+   font-size:16px;
+   color:black;
    @media (max-width:480px){
       font-size:14px;
    }
 }
 
-
+@import "./components";
 
 
 

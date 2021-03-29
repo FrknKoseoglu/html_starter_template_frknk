@@ -9,6 +9,31 @@ V = {
     V.form.init();
   },
 
+  Ajax: {
+    ajaxRequest: function (baseUrl, requestType, sentData = null) {
+      return new Promise((resolve, reject) => {
+        $.ajax({
+          url: baseUrl,
+          type: requestType,
+          data:
+            sentData != null && requestType != "GET"
+              ? sentData
+              : sentData != null && requestType == "GET"
+              ? sentData
+              : null,
+          dataType: "json",
+          /*contentType: "application/json",*/
+          success: function (response) {
+            resolve(response);
+          },
+          error: function (error) {
+            reject(error);
+          },
+        });
+      });
+    },
+  },
+
   features: {
     init: function () {
       this.clientInfo();
@@ -77,31 +102,6 @@ V = {
     },
   },
 
-  Ajax: {
-    ajaxRequest: function (baseUrl, requestType, sentData = null) {
-      return new Promise((resolve, reject) => {
-        $.ajax({
-          url: baseUrl,
-          type: requestType,
-          data:
-            sentData != null && requestType != "GET"
-              ? sentData
-              : sentData != null && requestType == "GET"
-              ? sentData
-              : null,
-          dataType: "json",
-          /*contentType: "application/json",*/
-          success: function (response) {
-            resolve(response);
-          },
-          error: function (error) {
-            reject(error);
-          },
-        });
-      });
-    },
-  },
-
   slider: {
     Swiper: function () {
       var swiper = new Swiper(".swiper-container", {
@@ -113,17 +113,42 @@ V = {
     },
   },
 
+  notice:{
+    init:function () { 
+        
+     },
+    formCheckBox: function() {
+      $('#kvkk-checkbox').click(function() {
+          if ($('#kvkk-checkbox').prop('checked')) {
+              $("#btn--disabled").css("display", "none");
+              $("#register").prop("disabled", false);
+          } else {
+              $("#btn--disabled").css("display", "block");
+              $("#register").prop("disabled", true);
+          }
+      });
+  },
+  formCheckBoxShake: function() {
+      $('.form .btn--disabled').click(function() {
+          $(".kvkk-checkbox").addClass("anim-shake");
+          $(".kvkk-checkbox p").addClass("color-warning");
+          $(".kvkk-checkbox a").addClass("color-warning");
+          setTimeout(function() {
+              $('.kvkk-checkbox').removeClass("anim-shake color-warning");
+              $(".kvkk-checkbox p").removeClass("color-warning");
+              $(".kvkk-checkbox a").removeClass("color-warning");
+          }, 1000);
+      });
+  }
+  },
+
   buttons: {
     init: function () {
-        this.addSocial();
-        this.focusInput();
+        this.Button1();
     },
-    addSocial: function () {
+    Button1: function () {
    
     },
-    focusInput:function () { 
-
-     }
   },
 
   popup: {
@@ -148,6 +173,11 @@ V = {
       $("form").submit(function () {
         $(this).find("button[type=submit]").prop("disabled", true);
       });
+     $(".phone").click(function () {
+          if (!$(".phone").val()) {
+              $(".phone").val("(5");
+          }
+      });
     },
     formMask: function () {
       // Use this Mask github.com/igorescobar/jQuery-Mask-Plugin - jQuery Mask Plugin v1.14.16
@@ -155,7 +185,7 @@ V = {
       $(".time").mask("00:00:00");
       $(".date_time").mask("00/00/0000 00:00:00");
       $(".cep").mask("00000-000");
-      $(".phone").mask("(000)-(000)-(0000)");
+      $(".phone").mask("(500)-(000)-(0000)");
       $(".phone_with_ddd").mask("(00)-(000)-(000)-(0000)");
       $(".phone_us").mask("(000) 000-0000");
       $(".mixed").mask("AAA 000-S0S");
@@ -191,6 +221,8 @@ V = {
   global: function () {
     //
   },
+ 
+
 };
 
 $(document).ready(function () {
