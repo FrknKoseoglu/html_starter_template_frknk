@@ -4,6 +4,11 @@
     align-items: center;
 }
 
+@mixin gridCenter{
+  display:grid;
+  place-items: center;
+}
+
 @mixin t02s{
   transition: .2s;
 }

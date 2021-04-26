@@ -13,12 +13,13 @@
 /* - */
 /* STYLES CSS >>> */
 
-body{
-   color:color(primary);
+html,body{
+   width:100%;
+   height:100%;
+   color:$color-1;
    font-family:$Font-1;
-   background:bgcolor(primary);
+   background:#fff;
    font-size:16px;
-   color:black;
    @media (max-width:480px){
       font-size:14px;
    }
