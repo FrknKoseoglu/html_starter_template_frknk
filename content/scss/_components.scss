@@ -13,7 +13,14 @@ a{
     }
     
 }
-
+img{
+    width:100%;
+	height:unset;
+    @media (max-width:768px){
+    height: 100%;
+	width:unset;
+    }
+}
 .btn {
     padding: 5px 25px;
     width: 100%;

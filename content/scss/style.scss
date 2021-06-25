@@ -13,16 +13,17 @@
 /* - */
 /* STYLES CSS >>> */
 
-html,body{
-   width:100%;
-   height:100%;
-   color:$color-1;
-   font-family:$Font-1;
-   background:#fff;
+:root{
    font-size:16px;
    @media (max-width:480px){
       font-size:14px;
    }
+}
+
+html{
+   color:$color-1;
+   font-family:$Font-1;
+   background:#fff;
 }
 
 @import "./components";
