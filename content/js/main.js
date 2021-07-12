@@ -164,15 +164,19 @@ V = {
   form: {
 
       init:function () { 
-          this.form();
+          this.forms();
           this.formMask();
       },
 
-    form: function (element) {
+    forms: function (element) {
       //Duplicate Form Send Block
       $("form").submit(function () {
         $(this).find("button[type=submit]").prop("disabled", true);
       });
+      $("form input").click(function (e) { 
+        e.preventDefault();
+        $(this).addClass("invalid");
+    });
      $(".phone").click(function () {
           if (!$(".phone").val()) {
               $(".phone").val("(5");

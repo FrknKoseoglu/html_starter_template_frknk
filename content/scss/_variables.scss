@@ -1,17 +1,27 @@
-   /* Fonts */
+/* Fonts */
+$Font-1: "Avenir",Arial, Helvetica, sans-serif;
+$Font-2:  Times, 'Times New Roman', serif;
+$Font-3: 'Playfair Display',Arial, Helvetica, sans-serif;
 
-   $Font-1:'PT Sans', sans-serif;
-   $Font-2:'Bell MT', sans-serif;
-   $Font-3:Arial, Helvetica, sans-serif;
- 
-   /* Colors */
+/* Colors */
 
+$color-0:#000;
+$color-1:#fff;
+$color-2:#36563d;
+$color-3:#333333;
+$color-4:#fff;
+$color-desc:#606060;
+$color-desc-2:#606060;
+$color-title:#98999b;
+$color-title-2:#98999b;
+$color-date:#a2a2a2;
+$color-date-2:#a2a2a2;
+$color-footer:#828282;
+$color-footer-2:#828282;
+$color-menu-1:#6e6e6e;
 
-  $color-1:#223051;
-  $color-2:#c02025;
-  $color-3:#555555;
-  $color-4:#efefef;
-  $color-5:#acacac;
-  $color-6:#fafafa;
-  $color-7:#e4e3de;;
+$bg-color-1:#f6f6f6;
+$bg-color-2:#f8f7f7;
 
+$border-color-1:#d0d0d0;
+$border-color-2:#edeef0;

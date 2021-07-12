@@ -1,34 +1,30 @@
-/* - */
-/* LIBRARY CSS >>> */
-// @import "./lib";
-/* - */
-/* <<< LIBRARY CSS  */
+// LIBRARY CSS >>> 
 
-/* - */
-/* GLOBAL CSS >>> */
+// <<< LIBRARY CSS 
+
+// GLOBAL CSS >>> 
 @import "./global";
-/* - */
-/* <<< GLOBAL CSS  */
+// <<< GLOBAL CSS 
 
-/* - */
-/* STYLES CSS >>> */
+// STYLES CSS >>> 
 
 :root{
-   font-size:16px;
-   @media (max-width:480px){
-      font-size:14px;
-   }
-}
-
-html{
    color:$color-1;
    font-family:$Font-1;
    background:#fff;
+   @include -font-vw(16);
+   @media (max-width:480px){
+      @include -font-vw(14);
+   }
 }
 
+
+
+// COMPONENTS CSS >>>
 @import "./components";
+// <<< COMPONENTS CSS
 
 
 
-/*  <<< STYLES CSS */
-/* - */
+
+// <<< STYLES CSS

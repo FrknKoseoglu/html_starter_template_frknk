@@ -1,19 +1,17 @@
+// Font CSS >>>
+@import url("/content/fonts/_fonts.css");
+// <<< Font CSS
+
+// Func-Var CSS >>> 
 @import "./variables";
 @import "./mixin";
 @import "./func";
+// <<< Func-Var CSS 
 
-/* - */
-/* Font CSS >>> */
-@import "../fonts/fonts";
-/* - */
-/* <<< Font CSS */
-/* - */
-/* CUSTOM CSS >>> */
+// CUSTOM CSS >>> 
 @import "./custom";
-/* - */
-/* <<< CUSTOM CSS */
-/* - */
-/* RESET CSS >>> */
+// <<< CUSTOM CSS 
+
+// RESET CSS >>> 
 @import "./reset";
-/*  <<< RESET CSS */
-/* - */
+// <<< RESET CSS

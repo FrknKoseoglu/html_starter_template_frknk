@@ -1,136 +1,21 @@
-/* - */
-/* LIBRARY CSS >>> */
-/* - */
-/* <<< LIBRARY CSS  */
-/* - */
-/* GLOBAL CSS >>> */
+@import url("/content/fonts/_fonts.css");
 /* Fonts */
 /* Colors */
-/* - */
-/* CUSTOM CSS >>> */
-@font-face {
-  font-family: 'Santral';
-  src: url("Santral-Medium.woff2") format("woff2"), url("Santral-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Santral';
-  src: url("Santral-Medium.woff2") format("woff2"), url("Santral-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Santral';
-  src: url("Santral-Bold.woff2") format("woff2"), url("Santral-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Santral';
-  src: url("Santral-Bold.woff2") format("woff2"), url("Santral-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Santral Book';
-  src: url("Santral-Book.woff2") format("woff2"), url("Santral-Book.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Santral Book';
-  src: url("Santral-Book.woff2") format("woff2"), url("Santral-Book.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* - */
-/* <<< CUSTOM CSS */
-/* - */
-/* CUSTOM CSS >>> */
-.w-bold {
-  font-weight: 600 !important;
-}
-
-.w-normal {
-  font-weight: normal !important;
-}
-
-.w-light {
-  font-weight: lighter !important;
-}
-
-.m-show {
-  display: none !important;
-}
-
-.d-show {
-  display: unset !important;
-}
-
-.d-block {
-  display: block !important;
-}
-
-.d-flex {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-}
-
-.vertical-center-d-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.lazy {
-  display: block;
-  width: 100%;
-}
-
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Custom Responsive CSS @@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
-@media only screen and (max-width: 960px) {
-  .m-show {
-    display: unset !important;
-  }
-  .d-show {
-    display: none !important;
-  }
-  .m-flex {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-  }
-  .m-order {
-    -webkit-box-ordinal-group: 0 !important;
-        -ms-flex-order: -1 !important;
-            order: -1 !important;
-  }
-  .m-block {
-    display: block !important;
-  }
-}
-
-/* - */
-/* <<< CUSTOM CSS */
-/* - */
-/* RESET CSS >>> */
+/* (1080px) WSXGA+ Display */
+/* (1680px) WSXGA+ Display */
+/* (1600px) HD+ Display */
+/* (1536px) iPad or %125 Zoom 1080p */
+/* (1440px) WXGA+ Display - MacBook */
+/* (1366px) WXGA Display - Laptop */
+/* (1280px) SXGA Display */
+/* (1024px) iPad */
+/* (960px) Mobile Device */
+/* (768px) Tablets */
+/* (64px) Android - General Smartphone */
+/* (480px) iPhone */
+/* (375px) Slim Smartphone */
+/* (320px) Extra Slim Phone */
+/* Responsive Resolution */
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0-modified | 20110126
    License: none (public domain)
@@ -502,28 +387,23 @@ textarea {
   padding: 0.2em 0;
 }
 
-/*  <<< RESET CSS */
-/* - */
-/* - */
-/* <<< GLOBAL CSS  */
-/* - */
-/* STYLES CSS >>> */
-body {
-  color: color(primary);
-  font-family: "PT Sans", sans-serif;
-  background: bgcolor(primary);
+:root {
+  color: #fff;
+  font-family: "Avenir", Arial, Helvetica, sans-serif;
+  background: #fff;
   font-size: 16px;
-  color: black;
+  font-size: clamp(14px, 1.11111vw, 24px);
 }
 
 @media (max-width: 480px) {
-  body {
+  :root {
     font-size: 14px;
+    font-size: clamp(12px, 0.97222vw, 21px);
   }
 }
 
 a {
-  color: #223051;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -532,11 +412,15 @@ a[href] {
 }
 
 a[href]:hover {
-  color: #c02025;
+  color: #36563d;
 }
 
 a.underline {
   text-decoration: underline !important;
+}
+
+img {
+  width: 100%;
 }
 
 .btn {
@@ -557,42 +441,167 @@ a.underline {
 }
 
 .btn--red {
-  background-color: #c02025;
+  background-color: #36563d;
   color: white;
-  border: 1px solid #c02025;
+  border: 1px solid #36563d;
 }
 
 .btn--red:hover {
   background-color: white;
-  color: #c02025;
-  border: 1px solid #c02025;
+  color: #36563d;
+  border: 1px solid #36563d;
 }
 
 .btn--white {
   background-color: white;
-  color: #c02025;
-  border: 1px solid #c02025;
+  color: #36563d;
+  border: 1px solid #36563d;
 }
 
 .btn--white:hover {
-  background-color: #c02025;
+  background-color: #36563d;
   color: white;
-  border: 1px solid #c02025;
+  border: 1px solid #36563d;
+}
+
+.banner {
+  position: relative;
+  margin-left: 4rem;
+  margin-bottom: 6rem;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner__bg img {
+    width: 100% !important;
+    height: 50vh;
+  }
+}
+
+.banner__text {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 10%;
+  height: 100%;
+  top: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.banner__desc {
+  font-size: 1.75rem;
+  line-height: 1.21;
+  width: 53%;
+  color: #fff !important;
+}
+
+@media (max-width: 768px) {
+  .banner__desc {
+    width: 75%;
+    font-size: 1.45rem;
+  }
+}
+
+.banner__link {
+  margin-top: 2rem;
+}
+
+.banner__link a {
+  color: #fff !important;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.box {
+  color: #606060;
+  padding: 15px;
+}
+
+.box:first-child {
+  padding-left: 0;
+}
+
+@media (max-width: 768px) {
+  .box:first-child {
+    padding: 15px;
+  }
+}
+
+.box:last-child {
+  padding-right: 0;
+}
+
+@media (max-width: 768px) {
+  .box:last-child {
+    padding: 15px;
+  }
+}
+
+.box__date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #a2a2a2;
+  margin-top: 1.2rem;
+  margin-bottom: 0.5rem;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.box__date img {
+  width: 0.6rem;
+  margin-right: 5px;
+}
+
+.box__title {
+  font-size: 1rem;
+  line-height: 1.38;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.box__readmore {
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: #a2a2a2;
+  text-align: left;
 }
 
 .textbox {
-  border: 1px solid #e4e3de;
+  border: 1px solid #000;
   height: 35px;
   padding: 4px 16px;
-  color: #acacac;
+  color: #000;
   -webkit-transition: .2s;
   transition: .2s;
 }
 
 .textbox:focus {
-  border-color: #c02025;
-  border-left: 3px solid #c02025;
-  color: #c02025;
+  border-color: #36563d;
+  border-left: 3px solid #36563d;
+  color: #36563d;
   -webkit-transition: .2s;
   transition: .2s;
 }
@@ -607,7 +616,7 @@ a.underline {
   appearance: none;
   outline: none;
   background: #fff;
-  border: 1px solid #e4e3de;
+  border: 1px solid #000;
   position: relative;
   -webkit-transition: .2s;
   transition: .2s;
@@ -615,7 +624,7 @@ a.underline {
 }
 
 .checkbox:checked {
-  background-color: #c02025;
+  background-color: #36563d;
 }
 
 .checkbox:checked::before {
@@ -629,5 +638,290 @@ a.underline {
   font-size: 9px;
 }
 
-/*  <<< STYLES CSS */
-/* - */
+.form {
+  color: #606060;
+}
+
+.form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form input[type=text],
+.form input[type=password],
+.form input[type=email],
+.form input[type=number],
+.form select {
+  width: 100%;
+  padding: 15px 25px;
+  margin-bottom: 15px;
+  font-size: 12px;
+  padding-top: 20px;
+}
+
+.form input {
+  max-height: 50px;
+  z-index: 10;
+  color: transparent;
+}
+
+.form input:focus {
+  outline: none !important;
+  color: #606060;
+}
+
+.form input:valid {
+  color: #606060;
+}
+
+.form input:focus + label {
+  -webkit-transition: .2s;
+  transition: .2s;
+  top: 11px;
+  font-size: 11.2px;
+  font-weight: 900;
+}
+
+.form input:valid + label {
+  -webkit-transition: .2s;
+  transition: .2s;
+  top: 11px;
+  font-size: 11.2px;
+  font-weight: 900;
+  color: #606060;
+}
+
+.form input.invalid:focus:invalid + label {
+  top: 11px;
+  font-size: 11.2px;
+  font-weight: 900;
+  color: red;
+}
+
+.form input.invalid:invalid + label {
+  color: red;
+  -webkit-transition: .2s;
+  transition: .2s;
+  top: 30%;
+  left: 42px;
+  font-weight: 900;
+}
+
+.form input.invalid:focus:invalid {
+  border-color: red;
+}
+
+.form input.invalid:invalid {
+  border-color: red;
+}
+
+.form label {
+  position: absolute;
+  top: 30%;
+  left: 42px;
+  -webkit-transition: .2s;
+  transition: .2s;
+  z-index: 5;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.form button {
+  padding: 20px 80px;
+  display: block;
+  margin-left: auto;
+  background: #000;
+  color: #fff;
+  margin-top: 35px;
+}
+
+@media (max-width: 768px) {
+  .form-contact {
+    margin-bottom: 35px;
+  }
+}
+
+.form .warning-area {
+  width: 100%;
+}
+
+.form .warning-area__check {
+  margin-top: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 1.31;
+  color: #606060;
+  font-size: 1rem;
+  font-weight: bold;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.form .warning-area__check input {
+  margin-right: 15px;
+}
+
+.tooltips {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  /* If you want dots under the hoverable text */
+}
+
+.tooltips .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltips:hover .tooltiptext {
+  visibility: visible;
+}
+
+.search-area {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 18%;
+  z-index: 200;
+  background: #ffffff;
+  height: 150px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+}
+
+.search-area form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search-area form input {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.search-area form input:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.search-area form .searchbutton {
+  border-radius: 5px;
+  margin-left: 15px;
+  outline: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
+  line-height: 0;
+}
+
+.search-area form .searchbutton i {
+  margin-right: 5px;
+}
+
+.search-area form .searchbutton:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.icon-date {
+  width: 1rem;
+  margin-right: 10px;
+}
+
+.text {
+  color: #606060;
+}
+
+.title {
+  font-size: 2.6rem;
+  font-weight: bold;
+}
+
+.title--s {
+  font-size: 32px;
+}
+
+.title--green {
+  color: #36563d;
+}
+
+.title--underline {
+  text-decoration: underline;
+}
+
+.title--slider {
+  font-size: 59px;
+  font-size: 4vw;
+  font-weight: bold;
+}
+
+.desc {
+  font-size: 1.35rem;
+  font-weight: bold;
+}
+
+.desc--green {
+  font-size: 32px;
+  color: #36563d;
+}
+
+.desc--slider {
+  font-size: 18px;
+}
+
+.detail {
+  color: #606060;
+}
+
+.readmore {
+  text-decoration: underline;
+  letter-spacing: 1.85px;
+  color: #fff;
+  font-weight: bold;
+}
+/*# sourceMappingURL=style.css.map */

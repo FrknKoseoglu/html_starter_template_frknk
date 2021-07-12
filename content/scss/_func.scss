@@ -1,0 +1,7 @@
+$designSize:1440;
+
+@function -px2vw($size){
+    $ratio: $designSize / 100;
+    $size: $size / $ratio;
+    @return $size + vw;
+}

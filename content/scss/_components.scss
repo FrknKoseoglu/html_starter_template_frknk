@@ -1,29 +1,29 @@
-
-a{
-    color:$color-1;
+a {
+    color: $color-1;
     text-decoration: none;
-    &[href]{
-        cursor:pointer;
-        &:hover{
-            color:$color-2;
+
+    &[href] {
+        cursor: pointer;
+
+        &:hover {
+            color: $color-2;
         }
     }
-    &.underline{
+
+    &.underline {
         text-decoration: underline !important;
     }
-    
+
 }
-img{
-    width:100%;
-	height:unset;
-    @media (max-width:768px){
-    height: 100%;
-	width:unset;
-    }
+
+img {
+    width: 100%;
 }
+
 .btn {
     padding: 5px 25px;
     width: 100%;
+
     &:disabled {
         filter: grayscale(1);
         cursor: not-allowed;
@@ -59,47 +59,396 @@ img{
     }
 }
 
-.textbox{
-    border:1px solid $color-7;
-    height:35px;
-    padding:4px 16px;
-    color:$color-5;
+.banner {
+    position: relative;
+    margin-left: 4rem;
+    margin-bottom: 6rem;
+
+    @media (max-width:768px) {
+        margin-left: 2rem;
+    }
+
+    &__bg {
+        img {
+            @media (max-width:768px) {
+                width: 100% !important;
+                height: 50vh;
+            }
+        }
+    }
+
+    &__text {
+        position: absolute;
+        @include flexCenter();
+        padding-left: 10%;
+        height: 100%;
+        top: 0;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__desc {
+        font-size: 1.75rem;
+        line-height: 1.21;
+        width: 53%;
+        color: $color-1 !important;
+
+        @media (max-width:768px) {
+            width: 75%;
+            font-size: 1.45rem;
+        }
+    }
+
+    &__link {
+        margin-top: 2rem;
+
+        a {
+            color: $color-1 !important;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    }
+
+}
+
+.box {
+    color: $color-desc;
+    padding: 15px;
+
+    &:first-child {
+        padding-left: 0;
+
+        @media (max-width:768px) {
+            padding: 15px;
+        }
+    }
+
+    &:last-child {
+        padding-right: 0;
+
+        @media (max-width:768px) {
+            padding: 15px;
+        }
+    }
+
+    &__date {
+        display: flex;
+        font-size: 0.8rem;
+        font-style: italic;
+        color: $color-date;
+        margin-top: 1.2rem;
+        margin-bottom: 0.5rem;
+        justify-content: flex-start;
+
+        img {
+            width: 0.6rem;
+            margin-right: 5px;
+        }
+    }
+
+    &__title {
+        font-size: 1rem;
+        line-height: 1.38;
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+
+    &__readmore {
+        text-decoration: underline;
+        font-weight: bold;
+        font-size: 0.8rem;
+        color: $color-date;
+        text-align: left;
+    }
+
+    //
+}
+
+.textbox {
+    border: 1px solid $color-0;
+    height: 35px;
+    padding: 4px 16px;
+    color: $color-0;
     @include t02s;
 
-    &:focus{
-        border-color:$color-2;
-        border-left:3px solid $color-2;
-        color:$color-2;
+    &:focus {
+        border-color: $color-2;
+        border-left: 3px solid $color-2;
+        color: $color-2;
         @include t02s;
     }
 }
 
-.checkbox{
+.checkbox {
     width: 15px;
     height: 15px;
-    margin-right:10px;
+    margin-right: 10px;
     -webkit-appearance: none;
     -moz-appearance: none;
     -o-appearance: none;
     appearance: none;
     outline: none;
     background: #fff;
-    border:1px solid $color-7;
+    border: 1px solid $color-0;
     position: relative;
     @include t02s;
     cursor: pointer;
+
     &:checked {
-      background-color: $color-2;
-      &::before {
-        content: '\2713';
-        display: block;
-        text-align: center;
-        color: #fff;
-        position: absolute;
+        background-color: $color-2;
+
+        &::before {
+            content: '\2713';
+            display: block;
+            text-align: center;
+            color: #fff;
+            position: absolute;
+            font-weight: bold;
+            left: 3px;
+            font-size: 9px;
+        }
+    }
+}
+
+.form {
+    color: $color-desc;
+  
+    form {
+      @include flexCenter;
+    }
+  
+    input[type=text],
+    input[type=password],
+    input[type=email],
+    input[type=number],
+    select {
+      width: 100%;
+      padding: 15px 25px;
+      margin-bottom: 15px;
+      font-size: 12px;
+      padding-top: 20px;
+    }
+  
+    input {
+      max-height: 50px;
+      z-index: 10;
+      color: transparent;
+  
+      &:focus {
+        outline: none !important;
+        color: $color-desc;
+      }
+  
+      &:valid {
+        color: $color-desc;
+      }
+  
+      &:focus+label {
+        @include t02s;
+        top: 11px;
+        font-size: 11.2px;
+        font-weight: 900;
+      }
+  
+      &:valid+label {
+        @include t02s;
+        top: 11px;
+        font-size: 11.2px;
+        font-weight: 900;
+        color: $color-desc;
+      }
+  
+      &.invalid:focus:invalid+label {
+        top: 11px;
+        font-size: 11.2px;
+        font-weight: 900;
+        color: red;
+      }
+  
+      &.invalid:invalid+label {
+        color: red;
+        @include t02s;
+        top: 30%;
+        left: 42px;
+        font-weight: 900;
+      }
+  
+      &.invalid:focus:invalid {
+        border-color: red;
+      }
+  
+      &.invalid:invalid {
+        border-color: red;
+      }
+    }
+  
+    label {
+      position: absolute;
+      top: 30%;
+      left: 42px;
+      @include t02s;
+      z-index: 5;
+      font-size: 13px;
+      font-weight: 500;
+    }
+  
+    button {
+      padding: 20px 80px;
+      display: block;
+      margin-left: auto;
+      background: $color-0;
+      color: $color-1;
+      margin-top: 35px;
+    }
+  
+    &-contact {
+      @media (max-width:768px) {
+        margin-bottom: 35px;
+      }
+    }
+  
+    .warning-area {
+      width: 100%;
+  
+      &__check {
+        margin-top: 35px;
+        display: flex;
+        line-height: 1.31;
+        color: $color-desc;
+        font-size: 1rem;
         font-weight: bold;
-        left: 3px;
-        font-size: 9px;
+        align-items: center;
+        justify-content: flex-start;
+  
+        & input {
+          margin-right: 15px;
+        }
       }
     }
 }
 
+.tooltips {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    /* If you want dots under the hoverable text */
+
+    .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        /* Position the tooltip text - see examples below! */
+        position: absolute;
+        z-index: 1;
+    }
+
+    &:hover .tooltiptext {
+        visibility: visible;
+    }
+}
+
+.search-area {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 18%;
+    z-index: 200;
+    background: #ffffff;
+    height: 150px;
+    width: 100%;
+    @include flexCenter;
+    display: none;
+
+    form {
+        @include flexCenter;
+
+        input {
+            width: 100%;
+            margin: 0 auto;
+
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+        }
+
+        .searchbutton {
+            border-radius: 5px;
+            margin-left: 15px;
+            outline: 0;
+            @include flexCenter;
+            height: 40px;
+            line-height: 0;
+
+            i {
+                margin-right: 5px;
+            }
+
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+.icon-date {
+    width: 1rem;
+    margin-right: 10px;
+}
+
+.text {
+    color: $color-desc;
+}
+
+.title {
+    font-size: 2.6rem;
+    font-weight: bold;
+
+    &--s {
+        font-size: 32px;
+    }
+
+    &--green {
+        color: $color-2;
+    }
+
+    &--underline {
+        text-decoration: underline;
+    }
+
+    &--slider {
+        font-size: 59px;
+        font-size: 4vw;
+        font-weight: bold;
+    }
+}
+
+.desc {
+    font-size: 1.35rem;
+    font-weight: bold;
+
+    &--green {
+        font-size: 32px;
+        color: $color-2;
+    }
+
+    &--slider {
+        font-size: 18px;
+    }
+}
+
+.detail {
+    color: $color-desc;
+}
+
+.readmore {
+    text-decoration: underline;
+    letter-spacing: 1.85px;
+    color: $color-1;
+    font-weight: bold;
+}
