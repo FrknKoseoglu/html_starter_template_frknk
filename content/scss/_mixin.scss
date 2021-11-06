@@ -1,5 +1,6 @@
 $designSize:1440;
 
+
 @mixin flexCenter{
     display: flex;
     justify-content: center;
@@ -15,15 +16,9 @@ $designSize:1440;
   transition: .2s;
 }
 
-@mixin -font-vw($size) {
+@mixin -font-vw($minSize, $size, $maxSize) {
   $viewSize:($size / $designSize) * 100;
-  $big:$size * 1.5;
-  $small:$size / 1.5;
-  
-  @if $small < 13 {
-      $small:$size - 2;
-  }
 
   font-size:$size + px;
-  font-size:clamp($small + px,$viewSize + vw,$big + px);
+  font-size:clamp($minSize + px,$viewSize + vw,$maxSize + px);
 }

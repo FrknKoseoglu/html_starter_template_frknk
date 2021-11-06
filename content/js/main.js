@@ -3,35 +3,8 @@ V = {
 
   init: function () {
     V.global();
+    V.slider.init();
     V.features.init();
-    V.buttons.init();
-    V.popup.init();
-    V.form.init();
-  },
-
-  Ajax: {
-    ajaxRequest: function (baseUrl, requestType, sentData = null) {
-      return new Promise((resolve, reject) => {
-        $.ajax({
-          url: baseUrl,
-          type: requestType,
-          data:
-            sentData != null && requestType != "GET"
-              ? sentData
-              : sentData != null && requestType == "GET"
-              ? sentData
-              : null,
-          dataType: "json",
-          /*contentType: "application/json",*/
-          success: function (response) {
-            resolve(response);
-          },
-          error: function (error) {
-            reject(error);
-          },
-        });
-      });
-    },
   },
 
   features: {
@@ -103,12 +76,46 @@ V = {
   },
 
   slider: {
+    init: function () { 
+      this.Swiper();
+     },
     Swiper: function () {
-      var swiper = new Swiper(".swiper-container", {
+      var main = new Swiper(".swiper-main", {
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+      var messages = new Swiper(".swiper-messages", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+      var member = new Swiper(".swiper-member", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop:true,
+        grabCursor: false,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          }
+        }
       });
     },
   },

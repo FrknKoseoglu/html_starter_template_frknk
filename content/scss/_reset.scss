@@ -26,6 +26,7 @@ time, mark, audio, video {
 
 /* make sure to set some focus styles for accessibility */
 :focus {
+    outline:none;
     outline-style: none;
     box-shadow: none;
     border-color: transparent;
@@ -132,7 +133,8 @@ html {
  */
 
 a:focus {
-    outline-style: none;
+    outline:none;
+outline-style: none;
 box-shadow: none;
 border-color: transparent;
 }
@@ -308,6 +310,10 @@ button::-moz-focus-inner,
 input::-moz-focus-inner {
     border: 0;
     padding: 0;
+    outline:none;
+    outline-style: none;
+    box-shadow: none;
+    border-color: transparent;
 }
 
 /**

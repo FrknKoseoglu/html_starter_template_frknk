@@ -6,23 +6,6 @@
     <meta charset="utf-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
-    <!-- <link rel="apple-touch-icon" sizes="57x57" href="/content/images/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/content/images/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/content/images/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/content/images/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/content/images/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/content/images/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/content/images/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/content/images/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/content/images/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/content/images/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/content/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/content/images/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/content/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/content/images/favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/content/images/favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff"> -->
     
     <!-- Bootstrap CSS -->
     <link defer="defer" rel="stylesheet" href="content/lib/bootstrap/bootstrap.min.css">
@@ -42,26 +25,55 @@
 
 <body >
 
-    <h1 style="text-align: center;font-size:22px;margin-top:35px">Components Test</h1>
+    <h1 class="components__title">Components Test</h1>
 
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="components" >
-                    <a href="http://google.com">This is Link</a>
-                    <div class="mb-3"></div>
-                    <a class="underline" href="http://google.com">This is Link Underline</a>
-                    <div class="mb-3"></div>
-                    <a class="btn btn--red btn--radius">Button 1</a>
-                    <div class="mb-3"></div>
-                    <a class="btn btn--white btn--radius">Button 2</a>
-                    <div class="mb-3"></div>
-                    <a class="btn btn--red">Button 3</a>
-                    <div class="mb-3"></div>
-                    <a class="btn btn--white">Button 4</a>
-                    <div class="mb-3"></div>
+            <div class="col-md-10">
+                <div class="components text">
+                    <div class="components__font">
+                        <div class="font-1">
+                            Font-1 <br><br>
+                            <p>pijamalı hasta yağız şoföre çabucak güvendi - <strong>pijamalı hasta yağız şoföre çabucak güvendi</strong></p>
+                            <p>PİJAMALI HASTA YAĞIZ ŞOFÖRE ÇABUCAK GÜVENDİ - <strong>PİJAMALI HASTA YAĞIZ ŞOFÖRE ÇABUCAK GÜVENDİ</strong></p>
+                           
+                        </div>
+                        <hr>
+                        <div class="font-2">
+                            Font-2 <br><br>
+                            <p>pijamalı hasta yağız şoföre çabucak güvendi - <strong>pijamalı hasta yağız şoföre çabucak güvendi</strong></p>
+                            <p>PİJAMALI HASTA YAĞIZ ŞOFÖRE ÇABUCAK GÜVENDİ - <strong>PİJAMALI HASTA YAĞIZ ŞOFÖRE ÇABUCAK GÜVENDİ</strong></p>
+                        </div>
+                        <hr>
+
+                    </div>
+                    <div class="components__link">
+                     <h1 class="components__title">LINK</h1>
+                        <a class="link" href="http://google.com">This is Link</a>
+                        <a class="underline" href="http://google.com">This is Link Underline</a>
+                    </div>
+                    <div class="components__button">
+                        <h1 class="components__title">BUTTON</h1>
+                        <a class="btn btn--blue">Button Blue</a>
+                        <a class="btn btn--white">Button White</a>
+                        <a class="btn btn-gradient--blue">Button Blue Gradient</a>
+                        <a class="btn btn-gradient--yellow">Button Yellow Gradient</a>
+                    </div>
+                    <div class="components__text">
+                        <h1 class="components__title">TEXT</h1>
+
+                        <div class="text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium earum corrupti, accusamus saepe distinctio eos, fugiat quos possimus odio alias inventore perspiciatis quisquam vitae repudiandae, consectetur dicta culpa. Maxime, debitis!
+                        </div>
+
+                        <div class="text">
+                            <div class="title">Title</div>
+                            <div class="desc">Desc Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus similique odio perspiciatis ipsum aut aperiam impedit, maiores odit dolore. Voluptate vero hic magnam nulla magni sunt accusantium aliquam doloribus asperiores.</div>
+                        </div>
+
+
+                    </div>
                     <input type="text" class="textbox" placeholder="Input Text Box">
-                    <div class="mb-3"></div>
                     <label for="">Checkbox : </label>
                     <input class="checkbox" type="checkbox" name="" id="">
                 </div>

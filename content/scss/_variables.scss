@@ -1,27 +1,58 @@
 /* Fonts */
-$Font-1: "Avenir",Arial, Helvetica, sans-serif;
-$Font-2:  Times, 'Times New Roman', serif;
-$Font-3: 'Playfair Display',Arial, Helvetica, sans-serif;
+$Font-1: 'Santral-Book', Arial, sans-serif;
+$Font-2: 'Santral', Arial, sans-serif;
+.font-1{font-family: $Font-1 !important;}
+.font-2{font-family: $Font-2 !important;}
 
 /* Colors */
 
 $color-0:#000;
 $color-1:#fff;
-$color-2:#36563d;
-$color-3:#333333;
+$color-2:#fff;
+$color-3:#fff;
 $color-4:#fff;
-$color-desc:#606060;
-$color-desc-2:#606060;
-$color-title:#98999b;
-$color-title-2:#98999b;
-$color-date:#a2a2a2;
-$color-date-2:#a2a2a2;
-$color-footer:#828282;
-$color-footer-2:#828282;
-$color-menu-1:#6e6e6e;
+$color-5:#fff;
+$color-6:#fff;
 
-$bg-color-1:#f6f6f6;
-$bg-color-2:#f8f7f7;
+$color-hover-0:#000;
+$color-hover-1:#fff;
+$color-hover-2:#fff;
+$color-hover-3:#fff;
+$color-hover-4:#fff;
+$color-hover-5:#fff;
+$color-hover-6:#fff;
 
-$border-color-1:#d0d0d0;
+$color-text:#000;
+$color-title:#000;
+$color-desc:#000;
+$color-footer:#000;
+$color-menu:#000;
+$color-slider:#000;
+$color-banner:#000;
+$color-date:#000;
+
+$color-hover-title:#000;
+$color-hover-desc:#000;
+$color-hover-footer:#000;
+$color-hover-menu:#000;
+$color-hover-slider:#000;
+$color-hover-banner:#000;
+$color-hover-date:#000;
+
+$bg-color-1:#efefef;
+$bg-color-2:#f9f9f9;
+$bg-color-3:#f9f9f9;
+$bg-color-4:#f9f9f9;
+$bg-color-5:#f9f9f9;
+
+$border-color-1:#979797;
 $border-color-2:#edeef0;
+$border-color-3:#d7d7d7;
+$border-color-3:#d7d7d7;
+$border-color-3:#d7d7d7;
+
+$gradient-yellow: linear-gradient(156deg, #ffdf31 -4%, #ffbb16 68%);
+$gradient-hover-yellow: linear-gradient(to bottom, #ffdf31 -68%, #ffde30 -68%, #ffbb16);
+
+$gradient-blue: linear-gradient(116deg, #003c9e 10%, #001c65 84%);
+$gradient-hover-blue: linear-gradient(116deg, #003c9e -41%, #001c65 84%);

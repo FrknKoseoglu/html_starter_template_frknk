@@ -1,30 +1,35 @@
-// LIBRARY CSS >>> 
-
-// <<< LIBRARY CSS 
-
 // GLOBAL CSS >>> 
 @import "./global";
 // <<< GLOBAL CSS 
 
 // STYLES CSS >>> 
 
-:root{
-   color:$color-1;
-   font-family:$Font-1;
-   background:#fff;
-   @include -font-vw(16);
-   @media (max-width:480px){
-      @include -font-vw(14);
+:root {
+   color: $color-desc;
+   font-family: $Font-1;
+   background: #fff;
+   @include -font-vw(14,14,16);
+
+   @media (max-width:480px) {
+      @include -font-vw(14,14,14);
    }
 }
-
-
 
 // COMPONENTS CSS >>>
 @import "./components";
 // <<< COMPONENTS CSS
 
+@import "./slider";
 
+
+.menu {
+ 
+}
+
+footer{
+   
+
+}
 
 
 // <<< STYLES CSS
