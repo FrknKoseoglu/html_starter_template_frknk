@@ -5,3 +5,5 @@ $designSize:1440;
     $size: $size / $ratio;
     @return $size + vw;
 }
+
+

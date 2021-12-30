@@ -1,35 +1,16 @@
-// GLOBAL CSS >>> 
-@import "./global";
-// <<< GLOBAL CSS 
+/* STYLES CSS >>> */
 
-// STYLES CSS >>> 
+/* GLOBAL --->>> */
+@import "./abstracts/global";
+/* <<<--- GLOBAL */
 
 :root {
-   color: $color-desc;
-   font-family: $Font-1;
-   background: #fff;
-   @include -font-vw(14,14,16);
+  background: #fff;
+  @include -font-vw(14, 14, 16);
 
-   @media (max-width:480px) {
-      @include -font-vw(14,14,14);
-   }
+  @media (max-width: 480px) {
+    @include -font-vw(14, 14, 14);
+  }
 }
 
-// COMPONENTS CSS >>>
-@import "./components";
-// <<< COMPONENTS CSS
-
-@import "./slider";
-
-
-.menu {
- 
-}
-
-footer{
-   
-
-}
-
-
-// <<< STYLES CSS
+/* <<< STYLES CSS */

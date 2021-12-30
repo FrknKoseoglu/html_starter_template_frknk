@@ -1,0 +1,15 @@
+:root {
+  @each $color, $colorVal in $colors {
+    @each $alpha, $alphaVal in $hexAlpha {
+      --#{$color}-#{$alpha}: #{$colorVal + $alphaVal};
+    }
+  }
+}
+
+@each $color, $colorVal in $colors {
+  @each $alpha, $alphaVal in $hexAlpha {
+    .#{$color}-#{$alpha} {
+      color: #{$colorVal + $alphaVal};
+    }
+  }
+}
