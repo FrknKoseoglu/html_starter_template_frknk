@@ -1,0 +1,42 @@
+.btn {
+  font-weight: 500;
+  box-shadow: none !important;
+  padding: 10px 15px;
+  width: 100%;
+  border-radius: 8px;
+  display: inline-block;
+  @include t02s;
+  font-weight: 500;
+  &:hover {
+    @include t02s;
+  }
+
+  &:disabled {
+    filter: grayscale(1);
+    cursor: not-allowed;
+    transition: 0.2s;
+  }
+  &--sharp {
+    border-radius: 0;
+  }
+  &--white {
+    background: #fff;
+    color: #000;
+    border: solid 1px #fff;
+
+    &:hover {
+      background: #000;
+      color: #fff;
+      border: solid 1px #000;
+    }
+  }
+  &--blue {
+    background: #000;
+    color: #fff;
+    border: solid 1px #000;
+    &:hover {
+      background: #fff;
+      color: #000;
+    }
+  }
+}

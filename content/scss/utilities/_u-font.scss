@@ -1,0 +1,7 @@
+@for $i from 0 through 100 {
+  @if ($i % 2 == 0){
+    .fsize-#{$i} {
+       font-size: #{$i}px !important;
+    }
+  }
+  }

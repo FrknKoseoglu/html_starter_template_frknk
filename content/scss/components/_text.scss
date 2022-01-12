@@ -1,0 +1,43 @@
+.text {
+  color: #000;
+  line-height: 1.5;
+}
+
+.desc {
+  @include -font-vw(12, 14, 16);
+}
+
+.date {
+  @include -font-vw(12, 14, 16);
+}
+
+.detail {
+  color: #000;
+}
+
+.title {
+  @include -font-vw(24, 32, 40);
+  font-weight: bold;
+
+  &--underline {
+    text-decoration: underline;
+  }
+
+  &--slider {
+  }
+}
+
+.textbox {
+  border: 1px solid #000;
+  height: 35px;
+  padding: 4px 16px;
+  color: #000;
+  @include t02s;
+
+  &:focus {
+    border-color: #000;
+    border-left: 3px solid #000;
+    color: #000;
+    @include t02s;
+  }
+}

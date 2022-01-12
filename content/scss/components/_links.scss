@@ -1,0 +1,36 @@
+a {
+    color: #000;
+    text-decoration: none;
+  
+    &[href] {
+      cursor: pointer;
+      @include t02s;
+  
+      &:hover {
+        color: #000;
+        @include t02s;
+        text-decoration: none;
+      }
+    }
+  
+    &.underline {
+      text-decoration: underline !important;
+    }
+  }
+
+.link {
+    color: #000;
+    @include t02s;
+    &:hover {
+      @include t02s;
+      color: #000;
+    }
+  
+}
+  .readmore {
+    text-decoration: underline;
+    letter-spacing: 1.85px;
+    color: #fff;
+    font-weight: bold;
+  }
+  

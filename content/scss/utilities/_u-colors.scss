@@ -1,15 +1,17 @@
 :root {
   @each $color, $colorVal in $colors {
-    @each $alpha, $alphaVal in $hexAlpha {
-      --#{$color}-#{$alpha}: #{$colorVal + $alphaVal};
-    }
+      --#{$color}: #{$colorVal};
   }
 }
 
 @each $color, $colorVal in $colors {
-  @each $alpha, $alphaVal in $hexAlpha {
-    .#{$color}-#{$alpha} {
-      color: #{$colorVal + $alphaVal};
+    .#{$color} {
+      color: #{$colorVal } !important;
     }
-  }
+    .bg-#{$color} {
+      background-color: #{$colorVal } !important;
+    }
+    .border-#{$color} {
+      border-color: #{$colorVal} !important;
+    }
 }
