@@ -1,0 +1,63 @@
+.footer-1 {
+    @include -font-vw(12, 12, 14);
+    color: $clr-gray-text;
+
+    a {
+        color: $clr-gray-text;
+    }
+
+    &__title {
+        @include -font-vw(12, 14, 16);
+        margin-bottom: 1rem;
+        font-weight: bold;
+    }
+
+    &-menu {
+        padding: 3rem 0;
+        padding-bottom: 2.5rem;
+        border-top: 1px solid $clr-gray-border;
+
+        ul {
+            li {
+                line-height: 2.08;
+            }
+        }
+    }
+
+    &-logo {
+        padding: 2.1rem 0;
+
+        &__company {
+            display: flex;
+        }
+
+        &__cert {
+            display: flex;
+
+            img {
+                height: 2.5rem;
+                object-fit: contain;
+                width: auto;
+                margin: 0 5px;
+            }
+        }
+
+        &__social {
+            padding: 12px 28px;
+            border-radius: 38px;
+            border: 1px solid $clr-blue-text;
+            display: flex;
+            justify-content: space-around;
+
+            a {
+                color: $clr-blue-text;
+            }
+        }
+    }
+
+    &-last {
+        padding: 1.2rem 0;
+        border-top: 1px solid $clr-gray-border;
+        @include -font-vw(10, 10, 12);
+    }
+}

@@ -6,6 +6,7 @@
 
 :root {
   background: #fff;
+  font-family: $Font-1;
   @include -font-vw(14, 14, 16);
 
   @media (max-width: 480px) {
@@ -13,7 +14,6 @@
   }
 }
 
-.test {
-}
+.test {}
 
 /* <<< STYLES CSS */

@@ -1,6 +1,17 @@
-With this project, you can quickly start your website projects.
 
-It is available in many libraries you need.There are ready-made Jquery Functions that I use very often.
+# [Project No] Project Title 
 
-Delete what you don't need and get started.
 
+Project Description
+
+
+
+
+
+
+
+## Links
+
+ - [Proje Test Linki](https://x.rhinorunner.net)
+ - [Proje Linki](https://google.com)
+ 

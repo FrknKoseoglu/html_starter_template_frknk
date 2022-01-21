@@ -15,10 +15,10 @@ V = {
     clientInfo: function () {
       // Detect Device
       var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(
-        navigator.userAgent
-      )
-        ? true
-        : false;
+          navigator.userAgent
+        ) ?
+        true :
+        false;
 
       // Browser Width and Height
       var browserWidth = window.innerWidth;
@@ -48,8 +48,8 @@ V = {
       var scrollCheck = false;
       $(window).scroll(function () {
         (scrollTop = $(window).scrollTop()),
-          (elementOffset = $(element).offset().top),
-          (distance = elementOffset - scrollTop);
+        (elementOffset = $(element).offset().top),
+        (distance = elementOffset - scrollTop);
 
         if (
           distance < distance1 &&
@@ -76,11 +76,12 @@ V = {
   },
 
   slider: {
-    init: function () { 
+    init: function () {
       this.Swiper();
-     },
+    },
     Swiper: function () {
       var main = new Swiper(".swiper-main", {
+        loop: true,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
@@ -89,72 +90,54 @@ V = {
           el: ".swiper-pagination",
         },
       });
-      var messages = new Swiper(".swiper-messages", {
+      var photo = new Swiper(".swiper-photo", {
+        loop: true,
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".swiper-photo .swiper-button-next",
+          prevEl: ".swiper-photo .swiper-button-prev",
         },
         pagination: {
-          el: ".swiper-pagination",
+          el: ".swiper-photo .swiper-pagination",
         },
-      });
-      var member = new Swiper(".swiper-member", {
-        slidesPerView: 1,
-        spaceBetween: 10,
-        loop:true,
-        grabCursor: false,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-          el: ".swiper-pagination",
-        },
-        breakpoints: {
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 10,
-          }
-        }
       });
     },
   },
 
-  notice:{
-    init:function () { 
-        
-     },
-    formCheckBox: function() {
-      $('#kvkk-checkbox').click(function() {
-          if ($('#kvkk-checkbox').prop('checked')) {
-              $("#btn--disabled").css("display", "none");
-              $("#register").prop("disabled", false);
-          } else {
-              $("#btn--disabled").css("display", "block");
-              $("#register").prop("disabled", true);
-          }
+  notice: {
+    init: function () {
+
+    },
+    formCheckBox: function () {
+      $('#kvkk-checkbox').click(function () {
+        if ($('#kvkk-checkbox').prop('checked')) {
+          $("#btn--disabled").css("display", "none");
+          $("#register").prop("disabled", false);
+        } else {
+          $("#btn--disabled").css("display", "block");
+          $("#register").prop("disabled", true);
+        }
       });
-  },
-  formCheckBoxShake: function() {
-      $('.form .btn--disabled').click(function() {
-          $(".kvkk-checkbox").addClass("anim-shake");
-          $(".kvkk-checkbox p").addClass("color-warning");
-          $(".kvkk-checkbox a").addClass("color-warning");
-          setTimeout(function() {
-              $('.kvkk-checkbox').removeClass("anim-shake color-warning");
-              $(".kvkk-checkbox p").removeClass("color-warning");
-              $(".kvkk-checkbox a").removeClass("color-warning");
-          }, 1000);
+    },
+    formCheckBoxShake: function () {
+      $('.form .btn--disabled').click(function () {
+        $(".kvkk-checkbox").addClass("anim-shake");
+        $(".kvkk-checkbox p").addClass("color-warning");
+        $(".kvkk-checkbox a").addClass("color-warning");
+        setTimeout(function () {
+          $('.kvkk-checkbox').removeClass("anim-shake color-warning");
+          $(".kvkk-checkbox p").removeClass("color-warning");
+          $(".kvkk-checkbox a").removeClass("color-warning");
+        }, 1000);
       });
-  }
+    }
   },
 
   buttons: {
     init: function () {
-        this.Button1();
+      this.Button1();
     },
     Button1: function () {
-   
+
     },
   },
 
@@ -170,24 +153,24 @@ V = {
 
   form: {
 
-      init:function () { 
-          this.forms();
-          this.formMask();
-      },
+    init: function () {
+      this.forms();
+      this.formMask();
+    },
 
     forms: function (element) {
       //Duplicate Form Send Block
       $("form").submit(function () {
         $(this).find("button[type=submit]").prop("disabled", true);
       });
-      $("form input").click(function (e) { 
+      $("form input").click(function (e) {
         e.preventDefault();
         $(this).addClass("invalid");
-    });
-     $(".phone").click(function () {
-          if (!$(".phone").val()) {
-              $(".phone").val("(5");
-          }
+      });
+      $(".phone").click(function () {
+        if (!$(".phone").val()) {
+          $(".phone").val("(5");
+        }
       });
     },
     formMask: function () {
@@ -200,10 +183,18 @@ V = {
       $(".phone_with_ddd").mask("(00)-(000)-(000)-(0000)");
       $(".phone_us").mask("(000) 000-0000");
       $(".mixed").mask("AAA 000-S0S");
-      $(".cpf").mask("000.000.000-00", { reverse: true });
-      $(".cnpj").mask("00.000.000/0000-00", { reverse: true });
-      $(".money").mask("000.000.000.000.000,00", { reverse: true });
-      $(".money2").mask("#.##0,00", { reverse: true });
+      $(".cpf").mask("000.000.000-00", {
+        reverse: true
+      });
+      $(".cnpj").mask("00.000.000/0000-00", {
+        reverse: true
+      });
+      $(".money").mask("000.000.000.000.000,00", {
+        reverse: true
+      });
+      $(".money2").mask("#.##0,00", {
+        reverse: true
+      });
       $(".ip_address").mask("0ZZ.0ZZ.0ZZ.0ZZ", {
         translation: {
           Z: {
@@ -213,9 +204,15 @@ V = {
         },
       });
       $(".ip_address").mask("099.099.099.099");
-      $(".percent").mask("##0,00%", { reverse: true });
-      $(".clear-if-not-match").mask("00/00/0000", { clearIfNotMatch: true });
-      $(".placeholder").mask("00/00/0000", { placeholder: "__/__/____" });
+      $(".percent").mask("##0,00%", {
+        reverse: true
+      });
+      $(".clear-if-not-match").mask("00/00/0000", {
+        clearIfNotMatch: true
+      });
+      $(".placeholder").mask("00/00/0000", {
+        placeholder: "__/__/____"
+      });
       $(".fallback").mask("00r00r0000", {
         translation: {
           r: {
@@ -225,14 +222,16 @@ V = {
           placeholder: "__/__/____",
         },
       });
-      $(".selectonfocus").mask("00/00/0000", { selectOnFocus: true });
+      $(".selectonfocus").mask("00/00/0000", {
+        selectOnFocus: true
+      });
     },
   },
 
   global: function () {
     //
   },
- 
+
 
 };
 
